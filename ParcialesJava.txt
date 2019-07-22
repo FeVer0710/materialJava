@@ -1,0 +1,140 @@
+package parcial;
+import java.util.Scanner;
+
+public class Parcial {
+    public static void main(String[] args) {
+        
+       Scanner sc = new Scanner(System.in);
+
+       float c, f;
+       System.out.print("Grados en C°: ");
+       
+       c = sc.nextFloat();       
+       f = (c * 9/5) + 32;
+
+       System.out.println("Grados en F°: " +  f);
+    }  
+}
+
+package parcial;
+import java.util.Scanner;
+
+public class Parcial {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese las horas que ha trabajado: ");
+
+        int horas = sc.nextInt();
+        int extras; 
+
+        extras = horas - 35;
+
+        if (horas <= 35){
+            System.out.println("Tu salario es: " + (horas * 12));
+        }else{
+            System.out.println("Tu salario es: " + ((35 * 12) + (25 * extras)));
+        }
+    }  
+}
+
+package parcial;
+import java.util.Scanner;
+
+public class Parcial {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Escribe un Numero: ");
+        int n = sc.nextInt();
+
+        System.out.println("Esta es la tabla del " + n);
+        for(int i = 1; i<=10; i++){
+             System.out.println(n + " * " + i + " = " + n*i);
+        }
+    }  
+}
+
+package parcial;
+import java.util.Scanner;
+
+public class Parcial {
+    public static void main(String[] args) {
+
+        Scanner sc =  new Scanner(System.in);
+        System.out.print("Escribe un Numero: ");
+        int n = sc.nextInt();
+        int i = 1;
+        
+        System.out.println("Esta es la tabla del " + n);
+        while(i <= 10)
+        {
+            System.out.println(n + " * " + i + " = " + n*i);
+            i++;
+        }    
+    }  
+}
+
+
+package parcial;
+import java.util.Scanner;
+
+public class Parcial {
+    public static void main(String[] args) {
+        int mayor;
+        int medio;
+        int menor;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: "); 
+        int numero1 = scanner.nextInt();
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+        System.out.print("Ingrese el tercer número: ");
+        int numero3 = scanner.nextInt();
+
+        if(numero1 > numero2 && numero1 > numero3){
+            mayor = numero1;            
+            if(numero2 > numero3){
+                medio = numero2;
+                menor = numero3;
+            }else{
+                medio = numero3;
+                menor = numero2;
+            }
+            System.out.println("El número mayor es: " + mayor);
+            System.out.println("El número medio es: " + medio);
+            System.out.println("El número menor es: " + menor);
+        }        
+
+        if(numero2 > numero1 && numero2 > numero3){
+            mayor = numero2;
+            if(numero1 > numero3){
+                medio = numero1;
+                menor = numero3;
+            }else{
+                medio = numero3;
+                menor = numero1;
+            }
+            System.out.println("El número mayor es: " + mayor);
+            System.out.println("El número medio es: " + medio);
+            System.out.println("El número menor es: " + menor);
+        }
+
+        if(numero3 > numero1 && numero3 > numero2){
+            mayor = numero3;
+            if(numero2 > numero1){
+                medio = numero2;
+                menor = numero1;
+            }else{
+                medio = numero1;
+                menor = numero2;
+            }
+            System.out.println("El número mayor es: " + mayor);
+            System.out.println("El número medio es: " + medio);
+            System.out.println("El número menor es: " + menor);
+        }
+    }
+}
